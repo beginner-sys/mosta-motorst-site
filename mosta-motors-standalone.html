@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mosta Motors — Showroom automobile à Mostaganem</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=Tajawal:wght@400;500;700;800&display=swap">
+<style>
+:root{--bg:#121110;--bg2:#1b1916;--line:#38332b;--tx:#f1ece3;--mute:#a79f90;--bz:#b8935a;--bz2:#d6b57c;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 16px/1.6 Archivo,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+html[lang=ar] body{font-family:Tajawal,Archivo,Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--bz2);outline-offset:3px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 clamp(18px,5vw,56px)}
+header{position:sticky;top:0;z-index:20;background:rgba(18,17,16,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:20px;height:68px}
+.logo{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:.02em}
+.logo img{width:46px;height:46px;flex:0 0 46px;border:1px solid var(--bz);border-radius:50%;background:#eee;object-fit:cover}
+.mm{width:38px;height:38px;border-radius:50%;background:#0a0a0a;border:2px solid var(--bz);display:grid;place-items:center;color:var(--bz2);font:800 14px/1 Archivo,sans-serif}
+nav{display:flex;gap:26px;margin-inline-start:auto;font-size:14px;color:var(--mute)}
+nav a:hover{color:var(--tx)}
+.lang{display:flex;gap:2px;border:1px solid var(--line);border-radius:99px;padding:3px}
+.lang button{all:unset;cursor:pointer;padding:4px 11px;border-radius:99px;font-size:13px;color:var(--mute)}
+.lang button[aria-pressed=true]{background:var(--bz);color:#16120b;font-weight:600}
+.lang button:focus-visible{outline:2px solid var(--bz2)}
+.hero{position:relative;min-height:calc(100svh - 68px);display:flex;align-items:flex-end;overflow:hidden;background:radial-gradient(120% 70% at 75% 85%,rgba(184,147,90,.28),transparent 60%),linear-gradient(180deg,#171512,#0d0c0b)}
+.hero::before{content:"MM";position:absolute;inset-inline-end:-2%;top:6%;font:800 min(44vw,520px)/1 Archivo,sans-serif;color:transparent;-webkit-text-stroke:1px rgba(184,147,90,.22);pointer-events:none}
+.hero::after{content:"";position:absolute;inset-inline:0;bottom:0;height:34%;background:linear-gradient(0deg,#0a0a09,transparent)}
+.hero .wrap{position:relative;z-index:2;padding-bottom:clamp(40px,8vh,90px);padding-top:80px}
+h1{margin:0 0 18px;font:800 clamp(40px,8vw,104px)/.98 Archivo,sans-serif;font-stretch:112%;letter-spacing:-.025em;max-width:13ch}
+html[lang=ar] h1{font-family:Tajawal,sans-serif;line-height:1.15;letter-spacing:0;max-width:16ch}
+.sub{max-width:52ch;font-size:clamp(16px,1.7vw,20px);color:var(--mute);margin:0 0 30px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 28px;border-radius:99px;font-weight:600;font-size:15px;border:1px solid var(--bz);transition:background .2s,color .2s}
+.btn.p{background:var(--bz);color:#16120b}.btn.p:hover{background:var(--bz2)}
+.btn.s{color:var(--bz2)}.btn.s:hover{background:rgba(184,147,90,.14)}
+.search{margin-top:-34px;position:relative;z-index:5}
+.sbox{display:grid;grid-template-columns:repeat(3,1fr) auto;gap:12px;background:var(--bg2);border:1px solid var(--line);border-radius:20px;padding:16px}
+.sbox label{display:block;font-size:13px;color:var(--mute);margin-bottom:4px}
+.sbox select{width:100%;min-height:46px;background:var(--bg);color:var(--tx);border:1px solid var(--line);border-radius:12px;padding:0 12px;font:inherit}
+.sbox .btn{align-self:end}
+section{padding:clamp(56px,9vw,110px) 0}
+h2{margin:0 0 10px;font:700 clamp(28px,4.4vw,48px)/1.1 Archivo,sans-serif;font-stretch:108%;letter-spacing:-.015em}
+html[lang=ar] h2{font-family:Tajawal,sans-serif;letter-spacing:0}
+.note{color:var(--mute);font-size:14px;margin:0 0 34px}
+.cars{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+.car{background:var(--bg2);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.ph{aspect-ratio:16/10;display:grid;place-items:center;color:var(--mute);font-size:13px;background:repeating-linear-gradient(135deg,#1f1c18 0 14px,#24201b 14px 28px)}
+.car div.i{padding:16px 18px 20px}
+.car b{display:block;font-size:18px}.car span{color:var(--mute);font-size:14px}
+.car .pr{margin-top:12px;color:var(--bz2);font-weight:700}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.tile{position:relative;min-height:340px;border-radius:20px;padding:28px;display:flex;flex-direction:column;justify-content:flex-end;border:1px solid var(--line);background:linear-gradient(0deg,rgba(10,10,9,.92),rgba(10,10,9,.2) 70%),linear-gradient(135deg,#2a241b,#14120f);transition:border-color .2s}
+.tile:hover{border-color:var(--bz)}
+.tile h3{margin:0 0 6px;font:700 24px/1.2 Archivo,sans-serif}
+html[lang=ar] .tile h3{font-family:Tajawal,sans-serif}
+.tile p{margin:0;color:var(--mute);font-size:15px}
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:34px;border-top:1px solid var(--line);padding-top:36px}
+.why h3{margin:0 0 6px;font-size:19px;color:var(--bz2)}.why p{margin:0;color:var(--mute)}
+.contact{background:var(--bg2);border-block:1px solid var(--line)}
+.cgrid{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+.tel{display:block;font:800 clamp(30px,5vw,52px)/1.1 Archivo,sans-serif;color:var(--bz2);margin:8px 0 22px;direction:ltr;unicode-bidi:isolate}
+.map{min-height:260px;border-radius:20px;border:1px solid var(--line);background:linear-gradient(0deg,rgba(18,17,16,.35),rgba(18,17,16,.35)),repeating-linear-gradient(60deg,#201d19 0 18px,#262219 18px 20px);display:grid;place-items:center;text-align:center;padding:24px}
+.pin{width:44px;height:44px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--bz);margin:0 auto 14px}
+footer{padding:36px 0 96px;color:var(--mute);font-size:14px}
+.fr{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;align-items:center}
+.soc{display:flex;gap:20px}.soc a:hover{color:var(--tx)}
+.wa{position:fixed;inset-inline-end:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:30;background:#25a05a;color:#fff;border-radius:99px;min-height:52px;padding:0 22px;display:flex;align-items:center;font-weight:600;box-shadow:0 6px 24px rgba(0,0,0,.45)}
+@media(max-width:860px){nav{display:none}.lang{margin-inline-start:auto}.sbox{grid-template-columns:1fr 1fr}.sbox .btn{grid-column:1/-1}.tiles,.why,.cgrid{grid-template-columns:1fr}.tile{min-height:240px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap bar">
+<a class="logo" href="#top"><img src="data:image/jpeg;base64,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" alt="Logo Mosta Motors"><span>Mosta Motors</span></a>
+<nav aria-label="Navigation">
+<a href="#vehicules" data-i="n1"></a><a href="#services" data-i="n2"></a><a href="#services" data-i="n3"></a><a href="#showroom" data-i="n4"></a><a href="#contact" data-i="n5"></a>
+</nav>
+<div class="lang" role="group" aria-label="Langue">
+<button data-l="fr" aria-pressed="true">FR</button><button data-l="ar" aria-pressed="false">عربية</button><button data-l="en" aria-pressed="false">EN</button>
+</div></div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+<h1 data-i="h1"></h1>
+<p class="sub" data-i="sub"></p>
+<div class="btns"><a class="btn p" href="#vehicules" data-i="b1"></a><a class="btn s" href="tel:+213558567380" data-i="b2"></a></div>
+</div></div>
+
+<div class="search"><div class="wrap"><form class="sbox" onsubmit="return false">
+<div><label for="f1" data-i="s1"></label><select id="f1"><option data-i="all"></option></select></div>
+<div><label for="f2" data-i="s2"></label><select id="f2"><option data-i="all"></option></select></div>
+<div><label for="f3" data-i="s3"></label><select id="f3"><option data-i="all"></option></select></div>
+<button class="btn p" data-i="s4"></button>
+</form></div></div>
+
+<section id="vehicules"><div class="wrap">
+<h2 data-i="v1"></h2><p class="note" data-i="v2"></p>
+<div class="cars">
+<article class="car"><div class="ph" data-i="ph"></div><div class="i"><b data-i="ex"></b><span data-i="spec"></span><div class="pr">— DA</div></div></article>
+<article class="car"><div class="ph" data-i="ph"></div><div class="i"><b data-i="ex"></b><span data-i="spec"></span><div class="pr">— DA</div></div></article>
+<article class="car"><div class="ph" data-i="ph"></div><div class="i"><b data-i="ex"></b><span data-i="spec"></span><div class="pr">— DA</div></div></article>
+<article class="car"><div class="ph" data-i="ph"></div><div class="i"><b data-i="ex2"></b><span data-i="spec2"></span><div class="pr">— DA</div></div></article>
+</div></div></section>
+
+<section id="services" style="padding-top:0"><div class="wrap">
+<div class="tiles">
+<a class="tile" href="#vehicules"><h3 data-i="t1"></h3><p data-i="t1p"></p></a>
+<a class="tile" href="#contact"><h3 data-i="t2"></h3><p data-i="t2p"></p></a>
+<a class="tile" href="#contact"><h3 data-i="t3"></h3><p data-i="t3p"></p></a>
+</div></div></section>
+
+<section id="showroom" style="padding-top:0"><div class="wrap">
+<h2 data-i="w0"></h2><p class="note"></p>
+<div class="why">
+<div><h3 data-i="w1"></h3><p data-i="w1p"></p></div>
+<div><h3 data-i="w2"></h3><p data-i="w2p"></p></div>
+<div><h3 data-i="w3"></h3><p data-i="w3p"></p></div>
+</div></div></section>
+
+<section id="contact" class="contact"><div class="wrap cgrid">
+<div>
+<h2 data-i="c1"></h2>
+<a class="tel" href="tel:+213558567380">0558 56 73 80</a>
+<div class="btns"><a class="btn p" href="https://wa.me/213558567380" data-i="wa"></a><a class="btn s" href="https://www.google.com/maps?q=35.9506023516929,0.09388104910629638" data-i="it"></a></div>
+</div>
+<div class="map"><div><div class="pin"></div><b>Showroom Mosta Motors</b><br><span style="color:var(--mute)" data-i="addr"></span></div></div>
+</div></section>
+</main>
+
+<footer><div class="wrap fr">
+<span>© 2026 Mosta Motors</span>
+<div class="soc"><a href="https://www.instagram.com/mosta_motors/">Instagram</a><a href="https://www.tiktok.com/@mosta_motors">TikTok</a><a href="https://www.snapchat.com/add/mosta_motors">Snapchat</a></div>
+</div></footer>
+<a class="wa" href="https://wa.me/213558567380">WhatsApp</a>
+
+<script>
+const T={
+fr:{n1:"Véhicules",n2:"Reprise & échange",n3:"Location",n4:"Le showroom",n5:"Contact",h1:"L’excellence automobile à Mostaganem.",sub:"Vente, reprise, échange et location : autos et motos, toutes marques.",b1:"Voir le stock",b2:"Appeler",s1:"Marque",s2:"Budget",s3:"Carburant",s4:"Rechercher",all:"Tous",v1:"Véhicules à la une",v2:"Exemples de présentation : à remplacer par votre stock réel.",ph:"Photo à ajouter",ex:"Marque · Modèle 2024",spec:"00 km · Essence · Automatique",ex2:"Moto · Modèle 2024",spec2:"00 km · 125 cm³",t1:"Autos et motos",t1p:"Toutes marques, révisées et garanties.",t2:"Reprise et échange",t2p:"Faites estimer votre véhicule et repartez avec un autre.",t3:"Location",t3p:"Louez une auto ou une moto pour la durée voulue.",w0:"Pourquoi Mosta Motors",w1:"Véhicules révisés",w1p:"Chaque véhicule est contrôlé avant la vente.",w2:"Garantie",w2p:"Vous roulez l’esprit tranquille après l’achat.",w3:"Conseil direct",w3p:"Une équipe qui répond au téléphone et sur WhatsApp.",c1:"Passez nous voir ou appelez-nous",wa:"Écrire sur WhatsApp",it:"Itinéraire",addr:"Mostaganem, route de la corniche (N11)"},
+en:{n1:"Vehicles",n2:"Trade-in & exchange",n3:"Rental",n4:"The showroom",n5:"Contact",h1:"Automotive excellence in Mostaganem.",sub:"Sales, trade-in, exchange and rental: cars and motorbikes, all brands.",b1:"See our stock",b2:"Call us",s1:"Brand",s2:"Budget",s3:"Fuel",s4:"Search",all:"All",v1:"Featured vehicles",v2:"Sample cards: replace them with your real stock.",ph:"Photo to add",ex:"Brand · Model 2024",spec:"0 km · Petrol · Automatic",ex2:"Motorbike · Model 2024",spec2:"0 km · 125 cc",t1:"Cars and motorbikes",t1p:"All brands, serviced and guaranteed.",t2:"Trade-in and exchange",t2p:"Get your vehicle valued and drive away in another.",t3:"Rental",t3p:"Rent a car or a motorbike for as long as you need.",w0:"Why Mosta Motors",w1:"Serviced vehicles",w1p:"Every vehicle is checked before it is sold.",w2:"Guarantee",w2p:"Drive with peace of mind after your purchase.",w3:"Direct advice",w3p:"A team that answers the phone and WhatsApp.",c1:"Visit us or give us a call",wa:"Message on WhatsApp",it:"Get directions",addr:"Mostaganem, coastal road (N11)"},
+ar:{n1:"المركبات",n2:"الاسترجاع والتبديل",n3:"الكراء",n4:"المعرض",n5:"اتصل بنا",h1:"التميّز في عالم السيارات بمستغانم.",sub:"بيع، استرجاع، تبديل وكراء: سيارات ودراجات نارية من جميع العلامات.",b1:"تصفّح المركبات",b2:"اتصل بنا",s1:"العلامة",s2:"الميزانية",s3:"الوقود",s4:"بحث",all:"الكل",v1:"مركبات مميزة",v2:"أمثلة للعرض فقط: سيتم استبدالها بمخزونكم الفعلي.",ph:"صورة ستُضاف",ex:"العلامة · الطراز 2024",spec:"0 كم · بنزين · أوتوماتيك",ex2:"دراجة نارية · الطراز 2024",spec2:"0 كم · 125 سم³",t1:"سيارات ودراجات نارية",t1p:"جميع العلامات، مراجَعة ومضمونة.",t2:"الاسترجاع والتبديل",t2p:"قدّروا قيمة مركبتكم وانطلقوا بأخرى.",t3:"الكراء",t3p:"اكتروا سيارة أو دراجة نارية للمدة التي تريدونها.",w0:"لماذا موستا موتورز",w1:"مركبات مراجَعة",w1p:"تُفحص كل مركبة قبل البيع.",w2:"الضمان",w2p:"سيروا مطمئنين بعد الشراء.",w3:"نصيحة مباشرة",w3p:"فريق يردّ على الهاتف وعلى واتساب.",c1:"زورونا أو اتصلوا بنا",wa:"راسلونا على واتساب",it:"الاتجاهات",addr:"مستغانم، الطريق الساحلي (N11)"}};
+function setL(l){document.documentElement.lang=l;document.documentElement.dir=l==="ar"?"rtl":"ltr";
+document.querySelectorAll("[data-i]").forEach(e=>e.textContent=T[l][e.dataset.i]);
+document.querySelectorAll(".lang button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.l===l));
+try{localStorage.setItem("mm-lang",l)}catch(e){}}
+document.querySelectorAll(".lang button").forEach(b=>b.onclick=()=>setL(b.dataset.l));
+let s="fr";try{s=localStorage.getItem("mm-lang")||"fr"}catch(e){}
+setL(T[s]?s:"fr");
+</script>
+</body>
+</html>
